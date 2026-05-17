@@ -1,33 +1,7 @@
-# Doodletown — Playful Learning for Curious Kids
+images 
 
-A cheerful sketchbook-inspired landing page built with **plain Vite + React + TypeScript + Tailwind CSS v4** and Framer Motion animations.
+<img width="854" height="1440" alt="dt1" src="https://github.com/user-attachments/assets/34bee66b-2247-4cf0-9d8d-ddb3b422edc0" />
 
-## Quick start
+<img width="800" height="1428" alt="dt2" src="https://github.com/user-attachments/assets/84440f3c-fcfb-4f84-8606-eb41f0b81975" />
 
-```bash
-bun install      # or: npm install / pnpm install
-bun dev          # http://localhost:5173
-bun run build    # production build into ./dist
-```
-
-## Signup form / email capture
-
-The hero "Start learning — it's free!" form sends signups to an endpoint of your choice.
-
-1. **Out of the box (no setup):** emails are saved to `localStorage` under the key `doodletown:signups` so you can demo the flow immediately. Open DevTools → Application → Local Storage to inspect.
-2. **Connect a real backend:** create a `.env` file at the project root with:
-
-   ```env
-   VITE_FORM_ENDPOINT=https://formspree.io/f/your-id
-   # or any endpoint that accepts JSON: { email, source }
-   # e.g. Formspree, Web3Forms, Resend, your own /api/signup, etc.
-   ```
-
-   The form will POST `{ "email": "...", "source": "doodletown-landing" }` as JSON.
-
-## Stack
-- React 19 + TypeScript
-- Vite 7
-- Tailwind CSS v4 (via `@tailwindcss/vite`)
-- Framer Motion (animations)
-- Lucide React (icons)
+<img width="814" height="396" alt="dt3" src="https://github.com/user-attachments/assets/d8d3fc2e-c713-4461-a9d1-78ff2ede76da" />
