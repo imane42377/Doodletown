@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #faf3e0;
+  --color-paper: #f6ecd2;
+  --color-paper-warm: #f1e3c4;
+  --color-ink: #2b3a55;
+  --color-primary: #5ec6c2;
+  --color-primary-deep: #3aa8a4;
+  --color-coral: #f08a6e;
+  --color-sunshine: #f4c542;
+  --color-pink: #f29ab8;
+  --color-mint: #aedcc0;
+  --color-muted: #6b7891;
+  --font-display: "Caveat", cursive;
+  --font-body: "Nunito", system-ui, sans-serif;
+}
+
+* {
+  scrollbar-color: var(--color-primary) var(--color-paper);
+  scrollbar-width: thin;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  background-image:
+    linear-gradient(transparent 27px, rgba(94,198,194,0.18) 28px),
+    radial-gradient(rgba(43,58,85,0.08) 1px, transparent 1px);
+  background-size: 100% 28px, 22px 22px;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.5px; }
+
+@utility border-sketch {
+  border: 3px solid var(--color-ink);
+  border-radius: 28px 18px 32px 22px / 22px 30px 18px 28px;
+}
+@utility border-sketch-sm {
+  border: 2.5px solid var(--color-ink);
+  border-radius: 20px 14px 22px 16px / 16px 22px 14px 20px;
+}
+@utility shadow-pencil {
+  box-shadow: 4px 4px 0 0 var(--color-ink);
+}
+@utility shadow-pencil-lg {
+  box-shadow: 8px 8px 0 0 var(--color-ink);
+}
+@utility underline-wiggle {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'><path d='M2 5 Q 15 0 30 4 T 60 4 T 90 4 T 118 4' stroke='%23f08a6e' stroke-width='3' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.4em;
+  padding-bottom: 0.15em;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.wiggle { animation: wiggle 2.6s ease-in-out infinite; transform-origin: 50% 90%; }
+.float-y { animation: float-y 4s ease-in-out infinite; }
